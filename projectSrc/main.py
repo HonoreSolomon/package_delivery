@@ -1,0 +1,31 @@
+from HashTable import HashTable
+
+
+table = HashTable()
+table.insert('bob','231-3311')
+table.insert('joe','232-3312')
+table.insert('bill','233-3313')
+table.insert('ana', '234-3314')
+table.insert('sam', '221-1212')
+table.insert('billy', '1223-1234')
+
+table.insert('4','232-3312')
+table.insert('2','233-3313')
+table.insert('989', '234-3314')
+table.insert('53', '221-1212')
+table.insert('244', '1223-1234')
+table.insert('11','231-3311')
+table.insert('42','232-3312')
+table.insert('22','233-3313')
+table.insert('9829', '234-3314')
+table.insert('523', '221-1212')
+table.insert('2424', '1223-1234')
+table.insert('31','231-3311')
+table.insert('43','232-3312')
+table.insert('23','233-3313')
+table.insert('9839', '234-3314')
+table.insert('533', '221-1212')
+table.insert('2344', '1223-1234')
+table.remove('1')
+
+print(table.get('bob'))
