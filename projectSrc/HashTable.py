@@ -9,13 +9,13 @@ class HashTable:
         self.table = [None] * self.size
     # function to handle hashing of key
     def _get_hash(self, key):
-        hashed = 0
-        for char in key:
-            hashed += ord(char)
-        return  hashed % len(self.table)
+        # hashed = 0
+        # for char in key:
+        #     hashed += ord(char)
+        return  hash(key) % len(self.table)
 
     # searches the bucketlist for the given key  and return the Key value pair
-    def __getKV__(self, key):
+    def __getKV(self, key):
         key_hash = self._get_hash(key)
         bucket_list = self.table[key_hash]
         #loop over all key values in bucketlist and return the matching key_value
@@ -62,14 +62,14 @@ class HashTable:
 
 
     def get(self, key):
-        kv_pair = self.__getKV__(key)
+        kv_pair = self.__getKV(key)
         return kv_pair[1]
     #
     def remove(self, key):
         bucket = self._get_hash(key)
         bucket_list = self.table[bucket];
         if bucket_list is not None:
-            key_value = self.__getKV__(key)
+            key_value = self.__getKV(key)
             bucket_list.remove(key_value)
 
         # self.size = self.size - 1
@@ -77,6 +77,7 @@ class HashTable:
     def print(self):
         for bucket in self.table:
             if bucket is not None:
-                print(bucket)
+                for package in bucket:
+                    print(package[1])
 
 
