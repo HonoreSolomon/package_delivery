@@ -5,15 +5,17 @@ class HashTable:
     #Assigns an empty list to every bucket
     def __init__(self):
         #initialize table with a list
+        self.count = 0
         self.size = 6
         self.table = [None] * self.size
     # function to handle hashing of key
+    # O(1)
     def _get_hash(self, key):
         # hashed = 0
         # for char in key:
         #     hashed += ord(char)
         return  hash(key) % len(self.table)
-
+    # O(N)
     # searches the bucketlist for the given key  and return the Key value pair
     def __getKV(self, key):
         key_hash = self._get_hash(key)
@@ -37,7 +39,7 @@ class HashTable:
     #             self.table.append([])
 
 
-
+    # O(N)
     #inserts a kv pair into the hashed bucket and updates if key is already there
     def insert(self, key, value):
         #uses the private hash func to return the bucket
@@ -49,35 +51,39 @@ class HashTable:
         #checks if the current bucket has a list, if not instantiates a list with the kv and returns true
         if bucket_list is None:
             self.table[key_hash] = list([key_value])
+            self.count += 1
             return True
         # checks if the key is already in the bucket list if yes, the it updates the value and returns true
         else:
             for kv in bucket_list:
                 if kv[0] == key:
                     kv[1] = value
+                    self.count += 1
                     return True
         #if not adds the kv pair to the end of the list
             bucket_list.append(key_value)
+            self.count += 1
             return True
 
-
+    # O(1)
     def get(self, key):
         kv_pair = self.__getKV(key)
         return kv_pair[1]
-    #
+    # O (1)
     def remove(self, key):
         bucket = self._get_hash(key)
         bucket_list = self.table[bucket];
         if bucket_list is not None:
             key_value = self.__getKV(key)
             bucket_list.remove(key_value)
-
+            self.count -= 1
+        return False
         # self.size = self.size - 1
-
-    def print(self):
-        for bucket in self.table:
-            if bucket is not None:
-                for package in bucket:
-                    print(package[1])
-
+    # # O(N^2)
+    # def print(self):
+    #     for bucket in self.table:
+    #         if bucket is not None:
+    #             for package in bucket:
+    #                 print(package[1])
+    #
 
