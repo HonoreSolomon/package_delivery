@@ -9,7 +9,7 @@ address_index = {}  # Dictionary for O(1) address lookups
 # ---------- Package Loading ----------
 def store_packages(table):
     #reads the CSV of package file
-    file = "projectSrc/CSV/WGUPS Package File(Sheet1).csv"
+    file = "WGUPS Package File(Sheet1).csv"
     with open(file) as fp:
         reader = csv.reader(fp, delimiter=',', quotechar='"')
         next(reader, None)
@@ -23,7 +23,7 @@ def store_packages(table):
 # Distance Data Loading
 def load_distance_data():
     global distance_data
-    file = "projectSrc/CSV/Distance_File.csv"
+    file = "Distance_File.csv"
     with open(file) as fp:
         #uses list comprehension to store distance data
         distance_data = [row for row in csv.reader(fp)]
@@ -31,7 +31,7 @@ def load_distance_data():
 #address data loading
 def load_address_data():
     global address_data, address_index
-    file = "projectSrc/CSV/Address_File.csv"
+    file = "Address_File.csv"
     with open(file) as fp:
         #uses list comprehension to create grab the address data from the csv and creates a dict to access address by index
         address_data = [row[2] for row in csv.reader(fp)]
@@ -72,5 +72,5 @@ def min_distance_from(from_address, packages):
         # distance = get_distance(from_address, package.address)
         # if distance < next_address:
         #     next_address, next_package = distance, package
-    return  next_package, next_address
+        return  next_package, next_address
 

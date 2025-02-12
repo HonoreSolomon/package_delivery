@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9dedccb3-fb0a-418e-9824-58f0ef511e2f" name="Changes" comment="init">
-      <change afterPath="$PROJECT_DIR$/projectSrc/deliveryStatuses.py" afterDir="false" />
+    <list default="true" id="9dedccb3-fb0a-418e-9824-58f0ef511e2f" name="Changes" comment="finalized">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projectSrc/HashTable.py" beforeDir="false" afterPath="$PROJECT_DIR$/projectSrc/HashTable.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projectSrc/Package.py" beforeDir="false" afterPath="$PROJECT_DIR$/projectSrc/Package.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projectSrc/CSV/Address_File.csv" beforeDir="false" afterPath="$PROJECT_DIR$/projectSrc/Address_File.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projectSrc/CSV/Distance_File.csv" beforeDir="false" afterPath="$PROJECT_DIR$/projectSrc/Distance_File.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projectSrc/CSV/WGUPS Package File(Sheet1).csv" beforeDir="false" afterPath="$PROJECT_DIR$/projectSrc/WGUPS Package File(Sheet1).csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projectSrc/data_worker.py" beforeDir="false" afterPath="$PROJECT_DIR$/projectSrc/data_worker.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projectSrc/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/projectSrc/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projectSrc/truck.py" beforeDir="false" afterPath="$PROJECT_DIR$/projectSrc/truck.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +29,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "HonoreSolomon"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/HonoreSolomon/package_delivery.git",
+    "accountId": "0066f412-770d-4a2e-96fa-a2cd59f45a3a"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -59,8 +69,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Honor\PycharmProjects\packageDelivery\projectSrc\CSV" />
       <recent name="C:\Users\Honor\PycharmProjects\packageDelivery\projectSrc" />
+      <recent name="C:\Users\Honor\PycharmProjects\packageDelivery\projectSrc\CSV" />
       <recent name="C:\Users\Honor\PycharmProjects\packageDelivery" />
       <recent name="C:\Users\Honor\PycharmProjects\packageDelivery\Package" />
       <recent name="C:\Users\Honor\PycharmProjects\packageDelivery\Lib\site-packages" />
@@ -119,7 +129,7 @@
       <workItem from="1738784282569" duration="1983000" />
       <workItem from="1738814150348" duration="14751000" />
       <workItem from="1738873320966" duration="2455000" />
-      <workItem from="1739309202285" duration="11612000" />
+      <workItem from="1739309202285" duration="12717000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -137,18 +147,38 @@
       <option name="project" value="LOCAL" />
       <updated>1738696195134</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="finalized">
+      <option name="closed" value="true" />
+      <created>1739322969634</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1739322969634</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
-    <option name="LAST_COMMIT_MESSAGE" value="init" />
+    <MESSAGE value="finalized" />
+    <option name="LAST_COMMIT_MESSAGE" value="finalized" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/packageDelivery$main.coverage" NAME="main Coverage Results" MODIFIED="1739322817099" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/packageDelivery$main.coverage" NAME="main Coverage Results" MODIFIED="1739323955224" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projectSrc" />
     <SUITE FILE_PATH="coverage/packageDelivery$test.coverage" NAME="test Coverage Results" MODIFIED="1738620617279" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/packageDelivery$HashTable.coverage" NAME="HashTable Coverage Results" MODIFIED="1738629400853" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv/Lib/site-packages/Package" />
   </component>
