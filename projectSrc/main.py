@@ -86,7 +86,7 @@ class Main:
             chosen_package = int(input("Please enter a package ID: "))
             time_stamp_dict, time_stamp = delivery_status_structure.get_time_stamp(convert_timedelta)
             package = time_stamp_dict.get(chosen_package)
-            print(f"Chosen Time:{str(convert_timedelta)} Package ID: {chosen_package} Last Delivered: {str(time_stamp)}: Delivery Status: {package[0]} Address: {package[1]} Deadline Time: {package[2]} Truck: {package[3]} Delivery Time: {package[4]} ")
+            print(f"Chosen Time:{str(convert_timedelta)} Package ID: {chosen_package} Last Updated: {str(time_stamp)}: Delivery Status: {package[0]} Address: {package[1]} Deadline Time: {package[2]} Truck: {package[3]} Delivery Time: {package[4]} ")
         elif choice == "3":
             user_time = input("Please enter a time to check status of package(s). Use the following format, HH:MM:SS")
             (h, m, s) = user_time.split(":")

@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9dedccb3-fb0a-418e-9824-58f0ef511e2f" name="Changes" comment="made the pathing better to be used by instructors. Now works outside of pycharm">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projectSrc/Package.py" beforeDir="false" afterPath="$PROJECT_DIR$/projectSrc/Package.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projectSrc/data_worker.py" beforeDir="false" afterPath="$PROJECT_DIR$/projectSrc/data_worker.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projectSrc/deliveryStatuses.py" beforeDir="false" afterPath="$PROJECT_DIR$/projectSrc/deliveryStatuses.py" afterDir="false" />
+    <list default="true" id="9dedccb3-fb0a-418e-9824-58f0ef511e2f" name="Changes" comment="changed interface to have additional information and fixed algorithim so it loops through all packages and does not return early.">
       <change beforePath="$PROJECT_DIR$/projectSrc/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/projectSrc/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projectSrc/truck.py" beforeDir="false" afterPath="$PROJECT_DIR$/projectSrc/truck.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +50,7 @@
   "keyToString": {
     "Python.HashTable.executor": "Run",
     "Python.Package.executor": "Debug",
+    "Python.data_worker.executor": "Run",
     "Python.deliveryStatuses.executor": "Debug",
     "Python.main.executor": "Run",
     "Python.test.executor": "Run",
@@ -134,7 +130,7 @@
       <workItem from="1738814150348" duration="14751000" />
       <workItem from="1738873320966" duration="2455000" />
       <workItem from="1739309202285" duration="13406000" />
-      <workItem from="1739478575227" duration="5258000" />
+      <workItem from="1739478575227" duration="5645000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -168,7 +164,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739324074414</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="changed interface to have additional information and fixed algorithim so it loops through all packages and does not return early.">
+      <option name="closed" value="true" />
+      <created>1739484597164</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1739484597164</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,7 +193,8 @@
     <MESSAGE value="init" />
     <MESSAGE value="finalized" />
     <MESSAGE value="made the pathing better to be used by instructors. Now works outside of pycharm" />
-    <option name="LAST_COMMIT_MESSAGE" value="made the pathing better to be used by instructors. Now works outside of pycharm" />
+    <MESSAGE value="changed interface to have additional information and fixed algorithim so it loops through all packages and does not return early." />
+    <option name="LAST_COMMIT_MESSAGE" value="changed interface to have additional information and fixed algorithim so it loops through all packages and does not return early." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -217,9 +222,10 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/packageDelivery$Package.coverage" NAME="Package Coverage Results" MODIFIED="1739481065655" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projectSrc" />
-    <SUITE FILE_PATH="coverage/packageDelivery$main.coverage" NAME="main Coverage Results" MODIFIED="1739484317618" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projectSrc" />
+    <SUITE FILE_PATH="coverage/packageDelivery$main.coverage" NAME="main Coverage Results" MODIFIED="1739484619035" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projectSrc" />
     <SUITE FILE_PATH="coverage/packageDelivery$test.coverage" NAME="test Coverage Results" MODIFIED="1738620617279" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/packageDelivery$truck.coverage" NAME="truck Coverage Results" MODIFIED="1739480950504" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projectSrc" />
+    <SUITE FILE_PATH="coverage/packageDelivery$data_worker.coverage" NAME="data_worker Coverage Results" MODIFIED="1739484610514" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projectSrc" />
     <SUITE FILE_PATH="coverage/packageDelivery$HashTable.coverage" NAME="HashTable Coverage Results" MODIFIED="1738629400853" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv/Lib/site-packages/Package" />
     <SUITE FILE_PATH="coverage/packageDelivery$deliveryStatuses.coverage" NAME="deliveryStatuses Coverage Results" MODIFIED="1739483117240" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projectSrc" />
   </component>
