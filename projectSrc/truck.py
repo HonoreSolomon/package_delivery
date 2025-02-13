@@ -5,7 +5,8 @@ from deliveryStatuses import DeliveryStatus
 
 
 class Truck:
-    def __init__(self, capacity=16, speed=18, load=0, packages=None, mileage=0, address="HUB", depart_time=None):
+    def __init__(self, truck, capacity=16, speed=18, load=0, packages=None, mileage=0, address="HUB", depart_time=None):
+        self.truck = truck
         self.capacity = capacity
         self.speed = speed
         self.load = load
@@ -17,7 +18,8 @@ class Truck:
         self.undelivered = []
 
 
-
+    # Time O(n^2)
+    # space O(n)
     # Method for ordering packages on a given truck using the nearest neighbor algo
     # This method also calculates the distance a given truck drives once the packages are sorted
     def delivering_packages(self, package_table, delivery_status_structure):
@@ -27,6 +29,7 @@ class Truck:
             if (packageID == 9):
                 package.address = '410 S State St'
                 package.zip = "84111"
+            package.truck = self.truck
             package.status = 'en route'
             self.undelivered.append(package)
         # clear packages so that they can be rearranged in the truck in  the order of the nearest neighbor
@@ -35,6 +38,7 @@ class Truck:
         #  loops through list of undelivered
         #adds the nearest package into the packages list
         while len(self.undelivered) > 0:
+            #min = O(n)
             next_package, next_address = min_distance_from(self.address, self.undelivered)
             # adds the neares pkg to the packages list
             self.packages.append(next_package.package_id)

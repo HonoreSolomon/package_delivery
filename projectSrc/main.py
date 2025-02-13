@@ -25,15 +25,15 @@ package_hash_table = HashTable()
 store_packages(package_hash_table)
 
 #create truck object truck 1
-truck1 = Truck(16, 18, None, [1, 13, 14, 15, 16, 20, 29, 30, 31, 34, 37, 40], 0.0, "4001 South 700 East",
+truck1 = Truck("Truck1", 16, 18, None, [1, 13, 14, 15, 16, 20, 29, 30, 31, 34, 37, 40], 0.0, "4001 South 700 East",
                      datetime.timedelta(hours=8))
 #  3, 6, 12, 17, 18, 19, 21, 22, 23, 24, 26, 27, 35, 36, 38, 39
 # Create truck object truck2
-truck2 = Truck(16, 18, None, [3, 6, 18, 25, 27, 28, 32, 33, 35, 36, 38, 39], 0.0,
+truck2 = Truck("Truck2", 16, 18, None, [3, 6, 18, 25, 27, 28, 32, 33, 35, 36, 38, 39], 0.0,
                      "4001 South 700 East", datetime.timedelta(hours=10, minutes=20))
 # 2, 4, 5, 6, 7, 8, 9, 10, 11, 25, 28, 32, 33
 # Create truck object truck3
-truck3 = Truck(16, 18, None, [2, 4, 5, 7, 8, 9, 10, 11, 12, 17, 19, 21, 22, 23, 24, 26], 0.0, "4001 South 700 East", datetime.timedelta(hours=10, minutes=20))
+truck3 = Truck("Truck3",16, 18, None, [2, 4, 5, 7, 8, 9, 10, 11, 12, 17, 19, 21, 22, 23, 24, 26], 0.0, "4001 South 700 East", datetime.timedelta(hours=10, minutes=20))
 #runs truck delivery method
 truck1.delivering_packages(package_hash_table,delivery_status_structure)
 
@@ -73,7 +73,11 @@ class Main:
         choice = input()
         if choice == "1":
             for time, packages in delivery_status_structure.map.items():
-                print(f"Time: {time}: Package Status:{packages}")
+                print(f"Time: {time}: Package Status:")
+                for id in packages:
+                    package = packages.get(id)
+                    print(f"ID: {id} Delivery Status: {package[0]} Address: {package[1]} Deadline Time: {package[2]} Truck: {package[3]} Delivery Time: {package[4]}")
+                print(" ")
             print(f"Total Mileage is {truck1.mileage + truck2.mileage + truck3.mileage}")
         elif choice == "2":
             user_time = input("Please enter a time to check status of package. Use the following format, HH:MM:SS")
@@ -81,19 +85,20 @@ class Main:
             convert_timedelta = datetime.timedelta(hours=int(h), minutes=int(m), seconds=int(s))
             chosen_package = int(input("Please enter a package ID: "))
             time_stamp_dict, time_stamp = delivery_status_structure.get_time_stamp(convert_timedelta)
-            package_status = time_stamp_dict.get(chosen_package)
-            print(f"Package ID: {chosen_package} Time: {str(time_stamp)}: Package Status:{package_status}")
+            package = time_stamp_dict.get(chosen_package)
+            print(f"Chosen Time:{str(convert_timedelta)} Package ID: {chosen_package} Last Delivered: {str(time_stamp)}: Delivery Status: {package[0]} Address: {package[1]} Deadline Time: {package[2]} Truck: {package[3]} Delivery Time: {package[4]} ")
         elif choice == "3":
-            user_time = input("Please enter a time to check status of package. Use the following format, HH:MM:SS")
+            user_time = input("Please enter a time to check status of package(s). Use the following format, HH:MM:SS")
             (h, m, s) = user_time.split(":")
             convert_timedelta = datetime.timedelta(hours=int(h), minutes=int(m), seconds=int(s))
             time_stamp_dict, time_stamp = delivery_status_structure.get_time_stamp(convert_timedelta)
             print(f"Chosen Time: {convert_timedelta} Last Packages Delivered at {time_stamp}")
-            for id, packages in time_stamp_dict.items():
-                print(f"Package: {id}: Package Status:{packages}")
+            for id, package in time_stamp_dict.items():
+                print(f"Package ID: {id} Last Updated: {str(time_stamp)}: Delivery Status: {package[0]} Address: {package[1]} Deadline Time: {package[2]} Truck: {package[3]} Delivery Time: {package[4]} ")
 
         elif choice == "4":
             exit()
+
 
 
 

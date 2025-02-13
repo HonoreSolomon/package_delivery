@@ -14,6 +14,7 @@ class Package:
         self.notes = notes
         self.departure_time = None
         self.delivery_time = None
+        self.truck = "Not Loaded Yet"
 
     def __str__(self):
         return "ID: %s, %s, %s, %s,  %s, Deadline: %s,  %s, Delivery: %s, Status: %s, Departure: %s" % (self.package_id, self.address, self.city, self.state, self.zip,

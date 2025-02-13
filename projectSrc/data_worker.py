@@ -36,7 +36,8 @@ def load_address_data():
         #uses list comprehension to create grab the address data from the csv and creates a dict to access address by index
         address_data = [row[2] for row in csv.reader(fp)]
         address_index = {address: index for index, address in enumerate(address_data)}
-
+#BigO(1)
+#space O(1)
 #distance calculation
 #find the distance between two addresses
 def get_distance(address1, address2):
@@ -49,7 +50,7 @@ def get_distance(address1, address2):
     #returns the difference as a float by using the max as the first index and themin as the second.
     return float(distance)
 
-
+#BigO(n)
 #nearest neighbor algorithim
 def min_distance_from(from_address, packages):
     #validate input address
@@ -72,5 +73,5 @@ def min_distance_from(from_address, packages):
         # distance = get_distance(from_address, package.address)
         # if distance < next_address:
         #     next_address, next_package = distance, package
-        return  next_package, next_address
+    return  next_package, next_address
 

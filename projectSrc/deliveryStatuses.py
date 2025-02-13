@@ -7,8 +7,11 @@ class DeliveryStatus:
             inner_dict = {}
             for i in range(1, package_table.count + 1):
                 package = package_table.get(i)
-                inner_dict[package.package_id] = package.status
+                inner_dict[package.package_id] = [package.status,package.address, package.Deadline_time,package.truck, package.delivery_time]
+                # [package.address, package.Deadline_time, package.truck, package.delivery_time, package.status]
             self.map[delivery_time] = inner_dict
+
+
     def get_time_stamp(self, chosen_time):
         for time in self.map.keys():
             if time <= chosen_time:
